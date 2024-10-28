@@ -30,7 +30,7 @@ const CategoryPage = () => {
                     ))}
                 </div>
             )}
-            {!loading && !error && filteredItems.length === 0 && <div>No items found.</div>}
+            {!loading && !error && filteredItems.length === 0 && <div className='flex justify-center items-center mt-8'>No result found.</div>}
         </div>
     );
 };
