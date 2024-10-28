@@ -21,6 +21,12 @@
 }
 
 @font-face{
+  font-family: "ExtraLight";
+  src:local("TitilliumWeb-ExtraLight"),
+  url('./assets/fonts/TitilliumWeb-Light.ttf') format("truetype")
+}
+
+@font-face{
   font-family: "Bold";
   src:local("TitilliumWeb-Bold"),
   url('./assets/fonts/TitilliumWeb-Bold.ttf') format("truetype")

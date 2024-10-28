@@ -10,7 +10,8 @@ export default {
         regular:['Regular'],
         semiBold:['SemiBold'],
         light:['Light'],
-        bold:['Bold']
+        bold:['Bold'],
+        extraLight:['ExtraLight']
       }
     },
   },

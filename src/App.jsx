@@ -1,10 +1,15 @@
 import './App.css'
+import React, { lazy, Suspense } from 'react'
+import Loader from './components/global/Loader';
+const CategoryPage = lazy(() => import('./pages/CategoryPage'));
 
 function App() {
   return (
-    <>
-      <h1 className='bg-red-500 font-regular'>Main App</h1>
-    </>
+    <Suspense fallback={
+      <Loader />
+    }>
+      <CategoryPage />
+    </Suspense>
   )
 }
 
