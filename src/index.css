@@ -52,7 +52,3 @@
 body, * {
   scrollbar-width: none;
 }
-
-html, body {
-  overflow-y: scroll;
-}
