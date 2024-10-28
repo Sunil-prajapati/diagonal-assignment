@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: "Regular";
+  src:local("TitilliumWeb-Regular"),
+  url('./assets/fonts/TitilliumWeb-Regular.ttf') format("truetype")
+}
+
+@font-face{
+  font-family: "SemiBold";
+  src:local("TitilliumWeb-SemiBold"),
+  url('./assets/fonts/TitilliumWeb-SemiBold.ttf') format("truetype")
+}
+
+@font-face{
+  font-family: "Light";
+  src:local("TitilliumWeb-Light"),
+  url('./assets/fonts/TitilliumWeb-Light.ttf') format("truetype")
+}
+
+@font-face{
+  font-family: "Bold";
+  src:local("TitilliumWeb-Bold"),
+  url('./assets/fonts/TitilliumWeb-Bold.ttf') format("truetype")
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #FFFFFF;
+  background-color: #171717;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
