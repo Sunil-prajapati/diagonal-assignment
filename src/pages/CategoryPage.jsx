@@ -1,22 +1,18 @@
-import React, { useState } from 'react'; // Import useState
+import React, { useContext } from 'react';
 import Header from '../components/header/header';
 import { API_URL } from '../constant/enum';
 import useFetch from '../hooks/useFetch';
 import ListItem from '../components/ui/ListItem';
 import Error from '../components/global/Error';
 import Loader from '../components/global/Loader';
+import { SearchContext } from '../context/SearchContext';
 
 const CategoryPage = () => {
+    const { searchQuery } = useContext(SearchContext);
     const { data, loading, error } = useFetch(`${API_URL.BASE_URL}data/page1.json`);
 
     const pageTitle = data?.page?.title;
     const contentItems = data?.page?.['content-items']?.content || [];
-
-    const [searchQuery, setSearchQuery] = useState('');
-
-    const handleSearch = (query) => {
-        setSearchQuery(query);
-    }
 
     const filteredItems = contentItems.filter(item =>
         item.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -24,7 +20,7 @@ const CategoryPage = () => {
 
     return (
         <div>
-            <Header title={pageTitle} handleSearch={handleSearch} searchQuery={searchQuery}/>
+            <Header title={pageTitle} />
             {loading && <Loader />}
             {error && <Error message={error} />}
             {!loading && !error && filteredItems.length > 0 && (
