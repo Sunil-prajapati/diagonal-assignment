@@ -3,6 +3,7 @@ import BackButton from '../global/BackButton';
 import CustomText from '../global/CustomText';
 import Search from '../global/Search';
 import { SearchContext } from '../../context/SearchContext';
+import '../../../src/App.css'
 
 const Header = ({ title = "Header Title", }) => {
     const [isSticky, setIsSticky] = useState(false);
@@ -22,8 +23,7 @@ const Header = ({ title = "Header Title", }) => {
 
     return (
         <div 
-            className={`flex flex-row items-center justify-between px-4 py-4 ${isSticky ? 'sticky top-0 z-10 bg-cover bg-no-repeat bg-center shadow-md' : ''}`}
-            style={{ backgroundImage: isSticky && "url('../src/assets/images/nav_bar.png')" }} 
+            className={`flex flex-row items-center justify-between px-4 py-4 ${isSticky ? 'header_sticky' : ''}`}
         >
             <div className='flex gap-4 items-center'>
                 <BackButton />
